@@ -1,9 +1,12 @@
 # Sound-Bubble-Logger-for-TILT
 
 Welcome and thanks for downloading and building a “Sound Bubble-Logger for Tilt”!
+
 The Sound Bubble-Logger is an multi function Arduino fermentation logger there monitor your yeast activity by motioning the CO2 release though blops pr. minute (BPM) and can display this information into Ubidots, Brewersfriend or Brewfather.  
 It also works as a TILT repeater and hence can include your Tilt data (gravity + wort temperature) into the “payload” sent till the cloud services and hence making this part easier. 
+
 Knowing the yeast activity though CO2 bubble measurements over time including the start of decline of acivity, we can better foresee when the SG is close to FG, and better make decision on dry-hopping, temperature changes, etc.! Combining the BPM, Sum BLOPS data, and TILT data giving the homebrewer the best data we can get for decision.
+
 Hence, Sound Bubble Logger For TILT gives you:
 1.	Reports the activity of the yeast as CO2 escape the fermenter by BPM.
 2.	Give you a pressure and temperature corrected sum of Blops, e.g. “Sum BLOPS(pt)/L”, there likewise is a measurement of the fermentation progression. As it is corrected for pressure and temperature the “Sum BLOPS(pt)/L” can be used to compare from brew to brew and hence give an additionally measurement of fermentation and its progression.
