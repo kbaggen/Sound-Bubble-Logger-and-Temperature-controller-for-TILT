@@ -17,11 +17,11 @@ Hence, this project measure/do:
 It needs an ESP32 devkit, Sound Sensor Detecting Module LM393 and a 2-channel relay. Some 3 pins wires and some 2 pin wires is also needed.
 
 Pin/pinout:
-heating: RELAY0_PIN 26  --> int1 on relay
-cooling: RELAY1_PIN 25  --> int2 på relay
-Soundsensor is connected on PIN 13
-5v by ESP32 WIN
-Ground
+* heating: RELAY0_PIN 26  --> int1 on relay
+* cooling: RELAY1_PIN 25  --> int2 på relay
+* Soundsensor is connected on PIN 13
+* 5v by ESP32 WIN
+* Ground
 
 Installing/Burn:
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
