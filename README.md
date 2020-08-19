@@ -1,9 +1,9 @@
 # Sound-Bubble-Logger-and-Temperature-controller-for-TILT
 
 
-The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM) and Sum BLOPS corrected for pressure impact on bubling rate and hence giving a compareable measument from brew to brew. Furthermore it repreats the TILT data of gravity and temperature and hence display this information into Ubidots, Breersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
+The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature and hence display this information into Ubidots, Breersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
-The software can be used to give an indicative rG (reduction in gravity) estimate though polymnomial approach based on the use of same S-airlock, same calibrated sensor is used with a precise amount of water (4-4,5 ml)! For more detalis see www.bubble-logger.com
+The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (reduction in gravity) estimate though polymnomial approach based on the use of same S-airlock, same calibrated sensor is used with a precise amount of water (4-4,5 ml)! For more detalis see www.bubble-logger.com
 
 Hence, this project measure/do:
 
@@ -11,7 +11,7 @@ Hence, this project measure/do:
 2. Repreats temperature by TILT
 3. Rpreats gravity by TILT
 4. Send data to the cloud in a easy way
-5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need useraction for creating polynomial to give a real SG estrimate. 
+5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need user interaction for creating polynomial to translate into a real SG estrimate. 
 6. A 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used.
 
 It needs an ESP32 devkit, Sound Sensor Detecting Module LM393 and a 2-channel relay. Some 3 pins wires and some 2 pin wires is also needed.
