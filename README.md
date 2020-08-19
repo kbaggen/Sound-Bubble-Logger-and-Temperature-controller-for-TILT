@@ -29,7 +29,8 @@ https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
 
 
 If you wish to burn bin-files from scratch:
-0xe000  boot_app0.bin 
-0x1000  bootloader_qio_80m.bin 
-0x10000 SBL4TILT_TempControl_v1.0.ino.bin 
-0x8000  SBL4TILT_TempControl_v1.0.ino.partitions.bin 
+* 0xe000  boot_app0.bin 
+* 0x1000  bootloader_qio_80m.bin 
+* 0x10000 SBL4TILT_TempControl_v1.0.ino.bin 
+* 0x8000  SBL4TILT_TempControl_v1.0.ino.partitions.bin 
+USe "Flash Download Tools (ESP8266 & ESP32 & ESP32-S2)" https://www.espressif.com/en/support/download/other-tools
