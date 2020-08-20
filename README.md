@@ -23,6 +23,8 @@ Pin/pinout:
 * 5v by ESP32 WIN
 * Ground
 
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/esp32_SBL4T_TempControl.png)
+
 Installing/Burn:
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
 https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
