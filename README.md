@@ -7,7 +7,7 @@ The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (redu
 
 Hence, this project measure/do:
 
-1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector (BPM and Sum BLOP(pt)/L).
+1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector (BPM (blops mr. min) and Sum BLOP(pt)/L). The Sum BLOP(pt)/L is the sum of Blops corrected for prressure and wort temerature impact on bubbling rate and as it is corrected for brew size, it is comparable number from brew to brew (based on same calibrated sensor, aligment, water amount and airtight fermenter).
 2. Repreats temperature from TILT into cloud
 3. Rereats gravity from TILT into cloud
 4. Hence, Send all data to the cloud in a easy way (BPM, Sum BLOP(pt)/L, Temperature, Gravity and color of TILT in use). The software sends to Ubidtos, Brewfather and Brewersfreind if you enter the url or Token in captive portal mode.
