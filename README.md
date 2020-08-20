@@ -14,9 +14,12 @@ Hence, this project measure/do:
 5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need user interaction for creating polynomial to translate into a real SG estrimate. 
 6. A 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used.
 
-**It needs an ESP32 devkit, Sound Sensor Detecting Module LM393 and a 2-channel relay. Some 3 pins wires and some 2 pin wires is also needed.**
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/SBL4TILT_outcone.png)
+https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 
-### Pin/pinout:
+
+### Needed parts and Pin/pinout
+**It needs an ESP32 devkit, Sound Sensor Detecting Module LM393 and a 2-channel relay. Some 3 pins wires and some 2 pin wires is also needed.**
 * heating: RELAY0_PIN 26  --> int1 on relay
 * cooling: RELAY1_PIN 25  --> int2 på relay
 * Soundsensor is connected on PIN 13
