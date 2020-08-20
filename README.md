@@ -8,9 +8,9 @@ The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (redu
 Hence, this project measure/do:
 
 1. the activity of the yeast as CO2 escape the fermenter by a digital sound detector.
-2. Repreats temperature by TILT
-3. Rpreats gravity by TILT
-4. Send data to the cloud in a easy way
+2. Repreats temperature from TILT into cloud
+3. Rereats gravity from TILT into cloud
+4. Hence, Send all data to the cloud in a easy way
 5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need user interaction for creating polynomial to translate into a real SG estrimate. 
 6. A 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used.
 
