@@ -32,7 +32,7 @@ https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
 https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
 
-If you wish to burn bin-files from scratch:
+If you wish to burn bin-files from scratch (see releases --> https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/releases/tag/v1.0):
 * 0xe000  boot_app0.bin 
 * 0x1000  bootloader_qio_80m.bin 
 * 0x10000 SBL4TILT_TempControl_v1.0.ino.bin 
