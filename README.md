@@ -3,7 +3,7 @@
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature though Bluethoth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
-The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (reduction in gravity) estimate though polymnomial approach based on the use of same S-airlock, same calibrated sensor is used with a precise amount of water (4-4,5 ml)! In this way the Bubble-Logger emualted a PLAATO. For more detalis see www.bubble-logger.com
+The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (reduction in gravity) estimate though polymnomial approach based on the use of same S-airlock, same calibrated sensor is used with a precise amount of water (4-4,5 ml)! In this way the Bubble-Logger emualted a PLAATO. For more detalis see below and/or www.bubble-logger.com
 
 Hence, this project measure/do:
 
