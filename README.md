@@ -14,7 +14,7 @@ Hence, this project measure/do:
 5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need user interaction for creating polynomial to translate into a real SG estrimate. 
 6. A 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used.
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/SBL4TILT_outcome.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_outcome.png)
 https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 
 
@@ -26,7 +26,7 @@ https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 * 5v by ESP32 WIN
 * Ground
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/esp32_SBL4T_TempControl.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl.png)
 
 ### Installing/Burn
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
@@ -50,6 +50,8 @@ Hence,
 * Set the various parameters accordingly (Currently, you need to set SSID+Password every time you enter “Captive Portal” mode, so you need to set SSID+password even you just changed one parameter. A bug we are working on).
 * If you later on wish to change for instance temperature, pull power for 2 sec, and go into portal mode agian and change the temperature (remember to set SSID+password agian too).
 
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_gui.png)
+
 Secondly, the Bubble-Logger also got a webserver you can follow all data on during brewing, to access this on you need to find the IP either in you routning table or some Network sniffer program. The Webserver is on: 192.168.1.xxx:8080 (hence please notice the port is 8080).
 
 You will ofcouse need a Ubidots STEM account and hence the TOKEN (see under API cridentials), and for Brewfather you need to enable "Custum Stream" and inset this asscociated URL into Bubble-logger. I am not good a brewersfriend, but this is similary done as Brewfather.
@@ -65,9 +67,9 @@ The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degr
 
 ### Building Sound sensor with “condom” and placement in airlock.
 (Fitting the Condom – Water Balloon on the LM393 – fitting in Airlock – Alginment)
-The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as above pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the mirc is place over the direct hole in the airlock, so the sesor get the direct sound “blup”.
+The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as below pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the mirc is place over the direct hole in the airlock, so the sesor get the direct sound “blup”.
 As the sensor got some shapes edges there will flence the ballon and secondly as the mirc rather easily can break off, try steady the sensor by some tape as first picture shows!
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/buidling%20sensor.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/buidling%20sensor.png)
 
 Notice the small hole in airlock. This helps fillling and clean the airlock if you choose not to ever remove the s-airlock (is the case of a blow-out system).
 
@@ -103,17 +105,17 @@ The “Bubble Logger” software contains complex build in models to account for
 If your are using an airtight tank and an S-shaped airlock with 4-4,5 ml water and a “hear and see” calibrated/aligned sensor you can to some degree predict the SG by the BPM (e.g. “Sum BLOPS(pt)/L”). It will only be an estimate and sometimes the SG will be way off.
 The SG is calculated by we measure the BPM over time and this is re-calculated in regards of “Sum BLOPS(pt)/L” by taken the current pressure, temperature and brew size into account (L), and hence this is used by the polynomial to calculate the rG though a first or second degree polynomial.
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/SBL4TILT_graph.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_graph.png)
 
 Looking at below data of the 18 brews done and plotting the reported rG vs. Sum BPMpt/L at the time the brew reached FG, we can model a first or second degree polynomial to fits the data and these polynomials can be used to model the reduction in gravity, rG. Hence, if you repeatedly take notice of the Sum BPMpt/L when FG is reached over 3-5 brews, you should be able to develop a polynomial/decision tool to foreseen the rG by the Bubble-Logger for your equipment.
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/SBL4TILT_overviewDATA.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_overviewDATA.png)
 
   
 
 Hence, if making use of above data we can generate a indicative rG table for this equipment setup based on the reported “Sum BPMpt/L” (based on “hear and see” calibrated sensor, 4,5 ml water in S-airlock and airtight fermenter):
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/SBL4TILT_table.png)
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_table.png)
  
 Meaning the “Sum BPMpt/L” of 5000 should give and reduction in gravity, rG, around 38-39 and error of mean is around 3 SG units (see former table).
 This should in theory function for all airtight fermenters/setup if using a calibrated sensor to “hear and sound” and having a S-shaped airlock with 4-4.5ml water. Every user will need to make there own polynomial based on above process.
