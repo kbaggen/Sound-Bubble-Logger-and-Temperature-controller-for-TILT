@@ -3,11 +3,11 @@
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature though Bluethoth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
-The software can be used though "Sum BLOPS(pt)/L" to give an indicative rG (reduction in gravity) estimate though polymnomial approach based on the use of same S-airlock, same calibrated sensor is used with a precise amount of water (4-4,5 ml)! In this way the Bubble-Logger emualted a PLAATO. For more detalis see below and/or www.bubble-logger.com
+The software can though the "Sum BLOPS(pt)/L" be used to give an indicative rG (reduction in gravity) estimate by polymnomial approach based on the use of same S-airlock, same calibrated sensor, known amount of water in airlock (4-4,5 ml)! In this way the Bubble-Logger emualted a PLAATO. For more detalis see below and/or www.bubble-logger.com
 
 Hence, this project measure/do:
 
-1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector (BPM (blops mr. min) and Sum BLOP(pt)/L). The Sum BLOP(pt)/L is the sum of Blops corrected for prressure and wort temerature impact on bubbling rate and as it is corrected for brew size, it is comparable number from brew to brew (based on same calibrated sensor, aligment, water amount and airtight fermenter).
+1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector giving blops pr. min (BPM) and Sum BLOP(pt)/L). The Sum BLOP(pt)/L is the sum of Blops corrected for prressure and wort temerature impact on the bubbling rate and as it is corrected for brew size too, it is hence a comparable number from brew to brew (based on same calibrated sensor, aligment, water amount, airtight fermenter, excact known brewsize, etc.).
 2. Repreats temperature from TILT into cloud
 3. Rereats gravity from TILT into cloud
 4. Hence, Send all data to the cloud in a easy way (BPM, Sum BLOP(pt)/L, Temperature, Gravity and color of TILT in use). The software sends to Ubidtos, Brewfather and Brewersfreind if you enter the url or Token in captive portal mode.
