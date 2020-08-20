@@ -35,4 +35,5 @@ If you wish to burn bin-files from scratch:
 * 0x1000  bootloader_qio_80m.bin 
 * 0x10000 SBL4TILT_TempControl_v1.0.ino.bin 
 * 0x8000  SBL4TILT_TempControl_v1.0.ino.partitions.bin 
+
 USe "Flash Download Tools (ESP8266 & ESP32 & ESP32-S2)" https://www.espressif.com/en/support/download/other-tools
