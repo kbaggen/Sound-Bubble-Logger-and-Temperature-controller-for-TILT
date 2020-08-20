@@ -1,4 +1,4 @@
-# BETA: Sound-Bubble-Logger-and-Temperature-controller-for-TILT
+# "SBL4TILT" - Sound-Bubble-Logger-and-Temperature-controller-for-TILT
 (DISCLAIMER: this software are still in beta and hence treat it carefully).
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature though Bluethoth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
