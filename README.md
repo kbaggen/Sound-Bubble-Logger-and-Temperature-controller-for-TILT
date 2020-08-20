@@ -43,11 +43,12 @@ USe "Flash Download Tools (ESP8266 & ESP32 & ESP32-S2)" https://www.espressif.co
 ### Operate/setup
 The Bubble Logger got a captive portal mode and hence you log on just as it was a Wifi access point. If the longin page do not autmatically come up, go to: 192.168.4.1
 
-It will for 60 seconds go into this “Captive Portal” mode where all setting can be done (E.g set Brew Name, SSID+Password, Brew Size, start Temperature, License, TILT Offset temperature+gravity and Brewfather URL/Ubidots Token/Brewersfriend URL). It light blue when in “Captive Portal” mode (and also blink blue when sending/treating data including dectection of a bubble). 
+It will for 60 seconds go into this “Captive Portal” at power on (or after any faliours as lost connection, lost power, or changes made by you) where all setting can be done (E.g set Brew Name, SSID+Password, Brew Size, start Temperature, License, TILT Offset temperature+gravity and Brewfather URL/Ubidots Token/Brewersfriend URL). It light blue when in “Captive Portal” mode (and also blink blue when sending/treating data including dectection of a bubble). 
 
 Hence,
 * Connect till the “Bubble Logger CONNECT” SoftAP though either you mobile phone or laptop by Wifi.  After connect till access point the Bubble-logger url for the configuration page is: 192.168.4.1 
 * Set the various parameters accordingly (Currently, you need to set SSID+Password every time you enter “Captive Portal” mode, so you need to set SSID+password even you just changed one parameter. A bug we are working on).
+* If you later on wish to change for instance temperature, pull power for 2 sec, and go into portal mode agian and change the temperature (remember to set SSID+password agian too).
 
 Secondly, the Bubble-Logger also got a webserver you can follow all data on during brewing, to access this on you need to find the IP either in you routning table or some Network sniffer program. The Webserver is on: 192.168.1.xxx:8080 (hence please notice the port is 8080).
 
