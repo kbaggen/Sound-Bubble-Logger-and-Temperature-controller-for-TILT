@@ -10,7 +10,7 @@ Hence, this project measure/do:
 1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector (BPM and Sum BLOP(pt)/L).
 2. Repreats temperature from TILT into cloud
 3. Rereats gravity from TILT into cloud
-4. Hence, Send all data to the cloud in a easy way (BPM, Sum BLOP(pt)/L, Temperature, Gravity and color of TILT in use). 
+4. Hence, Send all data to the cloud in a easy way (BPM, Sum BLOP(pt)/L, Temperature, Gravity and color of TILT in use). The software sends to Ubidtos, Brewfather and Brewersfreind if you enter the url or Token in captive portal mode.
 5. Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emualted a PLAATO, but need user interaction for creating polynomial to translate into a real SG estrimate. 
 6. A 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used.
 
@@ -28,7 +28,7 @@ https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/esp32_SBL4T_TempControl.png)
 
-### Installing/Burn:
+### Installing/Burn
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
 https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
 
@@ -39,6 +39,17 @@ If you wish to burn bin-files from scratch:
 * 0x8000  SBL4TILT_TempControl_v1.0.ino.partitions.bin 
 
 USe "Flash Download Tools (ESP8266 & ESP32 & ESP32-S2)" https://www.espressif.com/en/support/download/other-tools
+
+### Operate/setup
+The Bubble Logger got a captive portal mode and hence you log on just as it was a Wifi access point. If the longin page do not autmatically come up, go to: 192.168.4.1
+
+It will for 60 seconds go into this “Captive Portal” mode where all setting can be done (E.g set Brew Name, SSID+Password, Brew Size, start Temperature, License, TILT Offset temperature+gravity and Brewfather URL/Ubidots Token/Brewersfriend URL). It light blue when in “Captive Portal” mode (and also blink blue when sending/treating data including dectection of a bubble). 
+
+Hence,
+* Connect till the “Bubble Logger CONNECT” SoftAP though either you mobile phone or laptop by Wifi.  After connect till access point the Bubble-logger url for the configuration page is: 192.168.4.1 
+* Set the various parameters accordingly (Currently, you need to set SSID+Password every time you enter “Captive Portal” mode, so you need to set SSID+password even you just changed one parameter. A bug we are working on).
+
+Secondly, the Bubble-Logger also got a webserver you can follow all data on during brewing, to access this on you need to find the IP either in you routning table or some Network sniffer program. The Webserver is on: 192.168.1.xxx:8080 (hence please notice the port is 8080).
 
 ## Buliding sensor and calibration
 The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can “work” besides make some noise.
