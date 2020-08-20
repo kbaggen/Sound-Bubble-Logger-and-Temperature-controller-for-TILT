@@ -45,6 +45,7 @@ The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degr
 (Fitting the Condom – Water Balloon on the LM393 – fitting in Airlock – Alginment)
 The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as above pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the mirc is place over the direct hole in the airlock, so the sesor get the direct sound “blup”.
 As the sensor got some shapes edges there will flence the ballon and secondly as the mirc rather easily can break off, try steady the sensor by some tape as first picture shows!
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/buidling%20sensor.png)
 
 Notice the small hole in airlock. This helps fillling and clean the airlock if you choose not to ever remove the s-airlock (is the case of a blow-out system).
 
