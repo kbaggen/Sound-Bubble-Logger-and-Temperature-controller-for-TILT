@@ -120,14 +120,14 @@ Please notice the key or purpose of the Bubble-Logger here is not the rG nor gra
 So the user calculated polynomial and hence rG can be close to real life if a keen eye on airtight tanks, calibration and precise amount of water in airlock, but it cannot stand alone and in this sense a TILT or Ispindel is considered more precise. We believe the activity measurement of the Bubble Logger joint together with TILT gravity data is the best approach the homebrewer can do. 
 
 ### Important “take on messeges” if you wanna look into rG
-o	One calibrated Sensor = One Airlock.
-o	Sensor should be calibrated till “hear and see” matching count.
-o	4-4,5ml in S-Airlock.
-o	Alignment of sensor should be the same. Consider let the sensor stay in airlock, and clean by alkaline solution, acid and StarSan accordingly.
-o	Use a fermenter there is airtight. Be a “Leak Hunter”!
-o	Take notice of your amounts in Liters and set this in Bubble-Logger setup.
-o	Recalculate the polynomial to your equipment. 
-o	Make use of slow and controlled fermentation and/or good headspace.
-o	Or, use a blow-out system.
-o	Steady WiFi is needed for the logger to obtain data it needs for calculation (e.g. surrounding pressure). 
+*	One calibrated Sensor = One Airlock.
+*	Sensor should be calibrated till “hear and see” matching count.
+*	4-4,5ml in S-Airlock.
+*	Alignment of sensor should be the same. Consider let the sensor stay in airlock, and clean by alkaline solution, acid and StarSan accordingly.
+*	Use a fermenter there is airtight. Be a “Leak Hunter”!
+*	Take notice of your amounts in Liters and set this in Bubble-Logger setup.
+*	Recalculate the polynomial to your equipment. 
+*	Make use of slow and controlled fermentation and/or good headspace.
+*	Or, use a blow-out system.
+*	Steady WiFi is needed for the logger to obtain data it needs for calculation (e.g. surrounding pressure). 
 
