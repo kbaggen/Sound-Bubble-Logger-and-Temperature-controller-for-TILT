@@ -1,5 +1,5 @@
-# Sound-Bubble-Logger-and-Temperature-controller-for-TILT
-
+# BETA: Sound-Bubble-Logger-and-Temperature-controller-for-TILT
+(DISCLAIMER: this software are still in beta and hence treat it carefully).
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature though Bluethoth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
@@ -53,6 +53,11 @@ Hence,
 Secondly, the Bubble-Logger also got a webserver you can follow all data on during brewing, to access this on you need to find the IP either in you routning table or some Network sniffer program. The Webserver is on: 192.168.1.xxx:8080 (hence please notice the port is 8080).
 
 You will ofcouse need a Ubidots STEM account and hence the TOKEN (see under API cridentials), and for Brewfather you need to enable "Custum Stream" and inset this asscociated URL into Bubble-logger. I am not good a brewersfriend, but this is similary done as Brewfather.
+
+### Relay and warning = beta software
+This software is in beta and even I have build all the safty I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each datatreatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2 and will turn relay of if set, and samewise if you set temperature above 60. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavoir of restarting. If you experiance any melt-down where the logger get stuck ineither heating or cooling mode, please, let me know!
+
+Facebook group: https://www.facebook.com/groups/2176394599141882
 
 ## Buliding sensor and calibration
 The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can “work” besides make some noise.
