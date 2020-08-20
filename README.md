@@ -52,6 +52,8 @@ Hence,
 
 Secondly, the Bubble-Logger also got a webserver you can follow all data on during brewing, to access this on you need to find the IP either in you routning table or some Network sniffer program. The Webserver is on: 192.168.1.xxx:8080 (hence please notice the port is 8080).
 
+You will ofcouse need a Ubidots STEM account and hence the TOKEN (see under API cridentials), and for Brewfather you need to enable "Custum Stream" and inset this asscociated URL into Bubble-logger. I am not good a brewersfriend, but this is similary done as Brewfather.
+
 ## Buliding sensor and calibration
 The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can “work” besides make some noise.
 
