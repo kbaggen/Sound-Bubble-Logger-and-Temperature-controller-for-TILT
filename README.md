@@ -78,11 +78,7 @@ This give a high resolution sensor there miss a few and also post some double bu
 
 To be able to compare from brew to brew of BPM and hence make use of polynomial you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4-4,5 ml. Secondly, ensure the alignment of the probe is the same from brew to brew. Consider to have a blow-out setup where sensor never leaves the S-airlock.
  
-
-### One sensor = One Airlock
-I propose you stick to use one airlock with you calibrated sensor especially if you have made you own polynomial and is using this setup for estimating rG/SG. My testing do propose there is not big different between airlocks, see this post, but still “one sensor = one airlock” is current best approach.
-
-## Additionally/ experimental –  Estimate of “reduction in gravity” (rG)
+## Additionally/ experimental –  Estimate of “reduction in gravity” (rG) - PLAATO emulation
 The software can be used to give an indicative rG (reduction in gravity) estimate base on the use of an  S-airlock and a “hear and see” calibrated /aligned sensor is used with a precise amount of water (4-4,5 ml)! This will only function for complete airtight fermenters and even so is only indicative and need further calculation by the user.
 
 What we measure is as said the Blops pr. Min coming when CO2 is released, e.g. BPM, and if we look at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate two part CO2. Hence, CO2 is a direct measurement of the alcohol production. The key issue is to measurement this gas accurate and precise. Hence, the need of sealed airtight tanks.
