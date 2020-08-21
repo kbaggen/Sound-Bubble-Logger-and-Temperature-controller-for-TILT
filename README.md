@@ -3,7 +3,7 @@
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repreats the TILT data of gravity and temperature though Bluethoth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unike, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
-The software can though the "Sum BLOPS(pt)/L" be used to give an indicative rG (reduction in gravity) estimate by polymnomial approach based on the use of same S-airlock, same calibrated sensor, known amount of water in airlock (4-4,5 ml)! In this way the Bubble-Logger emualted a PLAATO. For more detalis see below and/or  see www.bubble-logger.com there currently cover the ESP8266 version for plain PLAATO emulation.
+The software can though the "Sum BLOPS(pt)/L" be used to give an indicative rG (reduction in gravity) estimate by polymnomial approach based on the use of same S-airlock, same calibrated sensor, known amount of wort,  and 4-4.5ml water in airlock! In this way the Bubble-Logger emualted a PLAATO. For more detalis see below!
 
 Hence, this project measure/do:
 
@@ -26,7 +26,9 @@ https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 * 5v by ESP32 WIN
 * Ground
 
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl.png)
+A "light" version is also offered and in this version all related to "relay" and temperature control is turned off. This versipon only needs VCC on WIN, ground and GPIO 13 to be attached till the sound sensor. If you new to Arduino this might be the place to start :-)
+
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl2.png)
 
 ### Installing/Burn
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
@@ -57,7 +59,7 @@ Secondly, the Bubble-Logger also got a webserver you can follow all data on duri
 You will ofcouse need a Ubidots STEM account and hence the TOKEN (see under API cridentials), and for Brewfather you need to enable "Custum Stream" and inset this asscociated URL into Bubble-logger. I am not good a brewersfriend, but this is similary done as Brewfather.
 
 ### Relay and warning = beta software
-This software is in beta and even I have included all the safty I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each datatreatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2 and will turn relay of if set, and samewise if you set temperature above 60. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavoir of restarting. If you experiance any melt-down where the logger get stuck ineither heating or cooling mode, please, let me know!
+This software is in beta and even I have included all the safty I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavoir of restarting. If you experiance any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
 
 Facebook group: https://www.facebook.com/groups/2176394599141882
 
