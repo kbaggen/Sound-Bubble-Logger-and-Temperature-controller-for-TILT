@@ -78,6 +78,8 @@ For Ubidots the above is also send, but also the power-state of relay is send, w
 ### Relay and warning = beta software
 This software is in beta and even I have included all the safty I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavoir of restarting. If you experiance any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
 
+### Questions/contact?
+
 Facebook group: https://www.facebook.com/groups/2176394599141882
 
 ## Buliding sensor and calibration
