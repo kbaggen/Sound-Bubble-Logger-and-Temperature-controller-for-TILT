@@ -134,7 +134,7 @@ Looking at below data of the 18 brews done and plotting the reported rG vs. Sum 
 
   
 
-Hence, if making use of above data we can generate a indicative rG table for this equipment setup based on the reported “Sum BPMpt/L” (based on “hear and see” calibrated sensor, 4,5 ml water in S-airlock and airtight fermenter):
+Hence, if making use of above data we can generate a indicative rG table for this equipment setup (e.g. sensor, airlock) based on the reported “Sum BPMpt/L” (based on “hear and see” calibrated sensor, 4,5 ml water in S-airlock and airtight fermenter):
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_table.png)
  
@@ -146,7 +146,7 @@ Please notice the key or purpose of the Bubble-Logger here is not the rG nor gra
 So the user calculated polynomial and hence rG can be close to real life if a keen eye on airtight tanks, calibration and precise amount of water in airlock, but it cannot stand alone and in this sense a TILT or Ispindel is considered more precise. We believe the activity measurement of the Bubble Logger joint together with TILT gravity data is the best approach the homebrewer can do. 
 
 ### Important “take on messeges” if you wanna look into rG
-*	One calibrated Sensor = One Airlock.
+*	One calibrated Sensor = One Airlock === Your own polynimial!
 *	Sensor should be calibrated till “hear and see” matching count.
 *	4-4,5ml in S-Airlock.
 *	Alignment of sensor should be the same. Consider let the sensor stay in airlock, and clean by alkaline solution, acid and StarSan accordingly.
