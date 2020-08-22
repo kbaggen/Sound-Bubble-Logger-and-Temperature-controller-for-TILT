@@ -145,6 +145,9 @@ Please notice the key or purpose of the Bubble-Logger here is not the rG nor gra
 
 So the user calculated polynomial and hence rG can be close to real life if a keen eye on airtight tanks, calibration and precise amount of water in airlock, but it cannot stand alone and in this sense a TILT or Ispindel is considered more precise. We believe the activity measurement of the Bubble Logger joint together with TILT gravity data is the best approach the homebrewer can do. 
 
+### Airlocks is different - One sensor,  one Airlock, givng Your polynomial
+As there is differency between airlocks, differncy in the molding, in the plastic and hence how the bubbles is formed then every user will need to stick to the rule of one sensor, one airlock and hence devlopement of your own polyonimial. Secondly, if you let the sensor stay in the airlock though somekind of blowout system chances are high you can predict the rG or SG by the use of Sum BLOPS(pt)/L.
+
 ### Important “take on messeges” if you wanna look into rG
 *	One calibrated Sensor = One Airlock === Your own polynimial!
 *	Sensor should be calibrated till “hear and see” matching count.
