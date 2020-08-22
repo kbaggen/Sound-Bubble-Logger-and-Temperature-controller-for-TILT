@@ -58,6 +58,22 @@ Secondly, the Bubble-Logger also got a webserver you can follow all data on duri
 
 You will ofcouse need a Ubidots STEM account and hence the TOKEN (see under API cridentials), and for Brewfather you need to enable "Custum Stream" and inset this asscociated URL into Bubble-logger. I am not good a brewersfriend, but this is similary done as Brewfather.
 
+### What data is send?
+The following data is send til Brewfather and Brewersfriend (please notice I am not good at Brwersfriend and hence might be issues/error):
+* "Blop pr. min" is send as: BPM
+* "Sum BLOPS(pt)/L" is send as: Pressure (PSI)
+* "Gravity" is send as: Gravity (G)
+* "Temeprature" is send as: Temperature (C)
+* "TILT colour" is send as a comment and can be seen under devices.
+(Please notice I do not and do not intend to support other than metic numbers. 3rd worlds countries has to add up and follow the scentific rules.)
+
+For Ubidots the above is also send, but also the power-state of relay is send, where the folling coding is used.
+* 0 = Relay awaiting.
+* 1 = Relay cooling.
+* 2 = Relay heating.
+* 3 = Relay turned of as something wrong ~ No TILT?
+* 4 = Relay tirned of as SetTemp is outside supported range of 2-60´C.
+
 ### Relay and warning = beta software
 This software is in beta and even I have included all the safty I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavoir of restarting. If you experiance any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
 
