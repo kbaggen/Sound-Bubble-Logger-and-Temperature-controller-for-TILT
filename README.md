@@ -32,7 +32,7 @@ A "light" version is also offered and in this version all related to "relay" and
 
 ### Installing/Burn
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" e.g. "SBL4TILT" or "SBL4TILT-light" should be an option to burn though Breflasher.
-https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
+https://github.com/thorrak/brewflasher/releases/
 
 
 ### Operate/setup
