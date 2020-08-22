@@ -148,6 +148,8 @@ So the user calculated polynomial and hence rG can be close to real life if a ke
 ### Airlocks is different - One sensor,  one Airlock, givng Your polynomial
 As there is differency between airlocks, differncy in the molding, in the plastic and hence how the bubbles is formed then every user will need to stick to the rule of one sensor, one airlock and hence devlopement of your own polyonimial. Secondly, if you let the sensor stay in the airlock though somekind of blowout system chances are high you can predict the rG or SG by the use of Sum BLOPS(pt)/L.
 
+!!! Please notice, the above data is for a former sensor now dead and an airlock I have put ot the grave too. Hence, I am to develop a new set of data on new sensor and new airlock in a blow-out syste,, so time will tell if this second run will hold water over the next 4-6 brews !!! 
+
 ### Important “take on messeges” if you wanna look into rG
 *	One calibrated Sensor = One Airlock === Your own polynimial!
 *	Sensor should be calibrated till “hear and see” matching count.
