@@ -31,16 +31,9 @@ A "light" version is also offered and in this version all related to "relay" and
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl2.png)
 
 ### Installing/Burn
-Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" should be an option to burn though Breflasher.
+Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" e.g. "SBL4TILT" or "SBL4TILT-light" should be an option to burn though Breflasher.
 https://github.com/thorrak/brewflasher/releases/tag/v1.0.1
 
-If you wish to burn bin-files from scratch (see releases --> https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/releases/):
-* 0xe000  boot_app0.bin 
-* 0x1000  bootloader_qio_80m.bin 
-* 0x10000 SBL4TILT_TempControl_v1.0.ino.bin 
-* 0x8000  SBL4TILT_TempControl_v1.0.ino.partitions.bin 
-
-USe "Flash Download Tools (ESP8266 & ESP32 & ESP32-S2)" https://www.espressif.com/en/support/download/other-tools
 
 ### Operate/setup
 The Bubble Logger got a captive portal mode and hence you log on just as it was a Wifi access point. If the longin page do not autmatically come up, go to: 192.168.4.1
