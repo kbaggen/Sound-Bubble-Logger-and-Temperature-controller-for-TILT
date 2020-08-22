@@ -65,9 +65,10 @@ The following data is send til Brewfather and Brewersfriend (please notice I am 
 * "Gravity" is send as: Gravity (G)
 * "Temeprature" is send as: Temperature (C)
 * "TILT colour" is send as a comment and can be seen under devices.
+
 (Please notice I do not and do not intend to support other than metic numbers. 3rd worlds countries has to add up and follow the scentific rules.)
 
-For Ubidots the above is also send, but also the power-state of relay is send, where the folling coding is used.
+For Ubidots the above is also send, but also the power-state of relay is send, where the following coding is used.
 * 0 = Relay awaiting.
 * 1 = Relay cooling.
 * 2 = Relay heating.
