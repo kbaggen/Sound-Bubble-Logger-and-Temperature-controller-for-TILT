@@ -16,6 +16,12 @@ Hence, this project measure/do:
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_outcome.png)
 https://web.brewfather.app/share/vcbmFVVWhc2ZLq
 
+### Questions/contact?
+
+Facebook group: https://www.facebook.com/groups/2176394599141882
+
+## Buidling a "SBL4TILT"
+This build is rather eaasy and do not need any soldering as such. It do need good knowledge for mains and hence, all high voltage work should be accomblished by a skilled worker in this area.
 
 ### Needed parts and Pin/pinout
 **It needs an ESP32 devkit, Sound Sensor Detecting Module LM393 and a 2-channel relay. Some 3 pins wires and some 2 pin wires is also needed.**
@@ -29,12 +35,35 @@ A "light" version is also offered and in this version all related to "relay" and
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl2.png)
 
-### Installing/Burn
+### Building Sound sensor with “condom” and placement in airlock.
+(Fitting the Condom – Water Balloon on the LM393 – fitting in Airlock – Alignment)
+The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as below pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the micorphone is place over the direct hole in the airlock, so the sensor get the direct sound “blop”.
+As the sensor got some shapes edges there will flence the balloon and secondly as the microphone rather easily can break off, try steady the sensor by some tape as first picture shows!
+![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/buidling%20sensor.png)
+
+Notice the small hole in airlock. This helps filling and clean the airlock if you choose not to ever remove the s-airlock (is the case of a blow-out system).
+
+Besides the water amount of 4-4,5ml and the use of a calibrated censor the foremost important factor is the alignment of the probe, and it need to be pressed all the way down in the s-airlock and aligned directly over the tube-hole and hence get the direct release of C02 sound/pressure-burst. If not fitted precisely you loose BPM and hence the rG estimate goes wrong if you choose to make use of the polynomial approach as second opinion of SG estimation.
+
+### Relay and warning = beta software
+This software is in beta and even I have included all the safety I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavior of restarting. If you experience any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
+
+### Calibration.
+Make a brew and Put on the “condom” (small water balloon) on the LM393, se below picture! When the BPM is around 15-30 (in avenge over 20-30min) by hear and see count adjust the potentiometer of the sensor till it reflect this by the logger (simply turn the potentiometer down until it stops lighten green and then fine adjust until you get the same BPM as hear and see count) . This is best done at a pressure around 1010-1018 hPa as the bubble rate is easy to detect by hear and see count. This give you a calibrated LM393 ready for your next brew (if you do the calibration very early in the fermentation and a large brew it should also be useful during the brew calibration is done upon).
+
+
+During the next 1-2 brews you can fine tune the potentiometer of the sound sensor so it reflects the BPM by hear and see. In all, during 3 brews you should hold a calibrated sensor there can give a precision of -/+ 3 gravity units if you make use of polynomial approach.
+
+This give a high resolution sensor there miss a few and also post some double bubbles, but this is fine as long the avenge BPM do reflect you hear and see count. calibration should give you between 30 and up till 100-150 SBM at high krauzen depending on temperature/yeast/brew size (I brew in 14-25L amounts), etc! This setting is prone to high sounds, but light talking, music, drier and washing machine is ok to have nearby!
+
+To be able to compare from brew to brew of BPM and hence make use of polynomial you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4-4,5 ml. Secondly, ensure the alignment of the probe is the same from brew to brew. Consider to have a blow-out setup where sensor never leaves the S-airlock.
+
+## Installing/Burn
 Please use Brewflasher! "Sound-Bubble-Logger-and-Temperature-controller-for-TILT" e.g. "SBL4TILT" or "SBL4TILT-light" should be an option to burn though Brewflasher.
 https://github.com/thorrak/brewflasher/releases/
 
 
-### Operate/setup
+## Operate/setup
 The Bubble Logger got a captive portal mode and hence you log on just as it was a Wifi access point. If the login page do not automatically come up, go to: 192.168.4.1
 
 It will for 60 seconds go into this “Captive Portal” at power on (or after any failures as lost connection or lost power) where all setting can be done (E.g hence, set Brew Name, SSID+Password, Brew Size, start Temperature, (License, currently not needed), TILT offset temperature/gravity and setting URL of either Brewfather URL/Ubidots Token/Brewersfriend). It light blue when in “Captive Portal” mode (and also blink blue when sending/treating data including detection of a bubble). 
@@ -67,36 +96,6 @@ For Ubidots the above is also send, but also the power-state of relay is send, w
 * 3 = Relay turned of as something wrong ~ No TILT?
 * 4 = Relay turned of as SetTemp is outside supported range of 2-60´C.
 
-### Relay and warning = beta software
-This software is in beta and even I have included all the safety I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavior of restarting. If you experience any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
-
-### Questions/contact?
-
-Facebook group: https://www.facebook.com/groups/2176394599141882
-
-## Building sensor and calibration
-The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can “work” besides make some noise.
-
-
-### Building Sound sensor with “condom” and placement in airlock.
-(Fitting the Condom – Water Balloon on the LM393 – fitting in Airlock – Alignment)
-The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as below pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the micorphone is place over the direct hole in the airlock, so the sensor get the direct sound “blop”.
-As the sensor got some shapes edges there will flence the balloon and secondly as the microphone rather easily can break off, try steady the sensor by some tape as first picture shows!
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/buidling%20sensor.png)
-
-Notice the small hole in airlock. This helps filling and clean the airlock if you choose not to ever remove the s-airlock (is the case of a blow-out system).
-
-Besides the water amount of 4-4,5ml and the use of a calibrated censor the foremost important factor is the alignment of the probe, and it need to be pressed all the way down in the s-airlock and aligned directly over the tube-hole and hence get the direct release of C02 sound/pressure-burst. If not fitted precisely you loose BPM and hence the rG estimate goes wrong if you choose to make use of the polynomial approach as second opinion of SG estimation.
-
-### Calibration.
-Make a brew and Put on the “condom” (small water balloon) on the LM393, se below picture! When the BPM is around 15-30 (in avenge over 20-30min) by hear and see count adjust the potentiometer of the sensor till it reflect this by the logger (simply turn the potentiometer down until it stops lighten green and then fine adjust until you get the same BPM as hear and see count) . This is best done at a pressure around 1010-1018 hPa as the bubble rate is easy to detect by hear and see count. This give you a calibrated LM393 ready for your next brew (if you do the calibration very early in the fermentation and a large brew it should also be useful during the brew calibration is done upon).
-
-
-During the next 1-2 brews you can fine tune the potentiometer of the sound sensor so it reflects the BPM by hear and see. In all, during 3 brews you should hold a calibrated sensor there can give a precision of -/+ 3 gravity units if you make use of polynomial approach.
-
-This give a high resolution sensor there miss a few and also post some double bubbles, but this is fine as long the avenge BPM do reflect you hear and see count. calibration should give you between 30 and up till 100-150 SBM at high krauzen depending on temperature/yeast/brew size (I brew in 14-25L amounts), etc! This setting is prone to high sounds, but light talking, music, drier and washing machine is ok to have nearby!
-
-To be able to compare from brew to brew of BPM and hence make use of polynomial you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4-4,5 ml. Secondly, ensure the alignment of the probe is the same from brew to brew. Consider to have a blow-out setup where sensor never leaves the S-airlock.
  
 ## Additionally/ experimental –  Estimate of “reduction in gravity” (rG) - PLAATO emulation
 The software can be used to give an indicative rG (reduction in gravity) estimate base on the use of an  S-airlock and a “hear and see” calibrated /aligned sensor is used with a precise amount of water (4-4,5 ml)! This will only function for complete airtight fermenters and even so is only indicative and need further calculation by the user.
