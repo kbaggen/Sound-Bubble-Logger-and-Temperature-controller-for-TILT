@@ -35,6 +35,9 @@ A "light" version is also offered and in this version all related to "relay" and
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl2.png)
 
+### Relay and warning = beta software
+This software is in beta and even I have included all the safety I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavior of restarting. If you experience any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
+
 ### Building Sound sensor with “condom” and placement in airlock.
 (Fitting the Condom – Water Balloon on the LM393 – fitting in Airlock – Alignment)
 The LM393 need a moisture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as below pictures shows. It needs to sit tight in the airlock making an seal to restrict any water from vaporization. To allow the pressure to equalize a small hole needs to be drilled. Align it so the micorphone is place over the direct hole in the airlock, so the sensor get the direct sound “blop”.
@@ -44,9 +47,6 @@ As the sensor got some shapes edges there will flence the balloon and secondly a
 Notice the small hole in airlock. This helps filling and clean the airlock if you choose not to ever remove the s-airlock (is the case of a blow-out system).
 
 Besides the water amount of 4-4,5ml and the use of a calibrated censor the foremost important factor is the alignment of the probe, and it need to be pressed all the way down in the s-airlock and aligned directly over the tube-hole and hence get the direct release of C02 sound/pressure-burst. If not fitted precisely you loose BPM and hence the rG estimate goes wrong if you choose to make use of the polynomial approach as second opinion of SG estimation.
-
-### Relay and warning = beta software
-This software is in beta and even I have included all the safety I can think off please treat it carefully. The Relay do turn off if no TILT is found, and the heating part of the relay do turn off before each data treatment to secure the heating is off if it goes down. The Bubble Logger do not support temperatures below 2´C or over 60´C and will turn relay of if set outside this range. If the wifi is unstable, and hence if the logger lose wifi it will restart to secure a new connection, hence, there is build in a behavior of restarting. If you experience any melt-down where the logger get stuck in either heating or cooling mode, please, let me know!
 
 ### Calibration.
 Make a brew and Put on the “condom” (small water balloon) on the LM393, se below picture! When the BPM is around 15-30 (in avenge over 20-30min) by hear and see count adjust the potentiometer of the sensor till it reflect this by the logger (simply turn the potentiometer down until it stops lighten green and then fine adjust until you get the same BPM as hear and see count) . This is best done at a pressure around 1010-1018 hPa as the bubble rate is easy to detect by hear and see count. This give you a calibrated LM393 ready for your next brew (if you do the calibration very early in the fermentation and a large brew it should also be useful during the brew calibration is done upon).
