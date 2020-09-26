@@ -31,7 +31,7 @@ This build is rather eaasy and do not need any soldering as such. It do need goo
 * 5v by ESP32 WIN
 * Ground
 
-A "light" version is also offered and in this version all related to "relay" and temperature control is turned off. This version only needs VCC on WIN, ground and GPIO 13 to be attached till the sound sensor. If you new to Arduino this might be the place to start :-)
+A "light" version can be made by not adding the relay part to the build. In this state you only need provide power by WIN, ground and GPIO 13 to be attached till the sound sensor. If you new to Arduino this might be the place to start and hence later take a look at include the relay :-)
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/esp32_SBL4T_TempControl2.png)
 
