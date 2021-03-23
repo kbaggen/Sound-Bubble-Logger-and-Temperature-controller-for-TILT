@@ -3,15 +3,15 @@
 
 The Bubble-Logger is an Arduino device (ESP32) there monitor your fermentation by sound in regards of yeast activity though motioning CO2 blops pr. minute (BPM). Furthermore it repeats the TILT data of gravity and temperature though Bluetooth connection and hence display this information into Ubidots, Brewersfriend  or Brewfather. Last, and unique, it can also control a heating-argent and cooler based on the temeprature reading of the TILT every 2 min.
 
-The software can though the "Sum BLOPS(pt)/L" be used to give an indicative rG (reduction in gravity) estimate by polynomial approach based on the use of same S-airlock, same calibrated sensor, known amount of wort,  and 4-4.5ml water in airlock! In this way the Bubble-Logger emulated a PLAATO. For more details see below!
+
 
 Hence, this project measure/do:
 
-1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector giving blops pr. min (BPM) and Sum BLOP(pt)/L). The Sum BLOP(pt)/L is the sum of Blops corrected for prressure and wort temperature impact on the bubbling rate and as it is corrected for brew size too, it is hence a comparable number from brew to brew (based on same calibrated sensor, alignment, water amount, airtight fermenter, exact known brew size, etc.).
+1. Measure the activity of the yeast as CO2 escape the fermenter by a digital sound detector giving blops pr. min (BPM) and Sum BLOP(pt)/L). .
 2. Repeats temperature and Gravity from TILT into cloud.
 3. Hence, Send all data to the cloud in a easy way (BPM, Sum BLOP(pt)/L, Temperature, Gravity and color of TILT in use). The software sends to Ubidtos, Brewfather and Brewersfreind if you enter the url or Token in captive portal mode.
 4. It can control a 2-channel Relay to control a heat and cool source based on the temperature reading of the TILT every 2 min, hence, slow-working heating actor should be used (I used a 30W reptile heating mat).
-5. BETA: Estimate of “reduction in gravity” (rG) can be calculated from the Sum BLOPS(pt)/L based on complex model taking pressure and temperature data into account. In this way the Bubble-Logger emulates a PLAATO, but need user interaction for creating polynomial to translate into a real SG estimate. 
+
 
 ![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_outcome.png)
 https://web.brewfather.app/share/vcbmFVVWhc2ZLq
@@ -95,60 +95,3 @@ For Ubidots the above is also send, but also the power-state of relay is send, w
 * 2 = Relay heating.
 * 3 = Relay turned of as something wrong ~ No TILT?
 * 4 = Relay turned of as SetTemp is outside supported range of 2-60´C.
-
- 
-## Additionally/ experimental –  Estimate of “reduction in gravity” (rG) - PLAATO emulation
-The software can be used to give an indicative rG (reduction in gravity) estimate base on the use of an  S-airlock and a “hear and see” calibrated /aligned sensor is used with a precise amount of water (4-4,5 ml)! This will only function for complete airtight fermenters and even so is only indicative and need further calculation by the user.
-
-What we measure is as said the Blops pr. Min coming when CO2 is released, e.g. BPM, and if we look at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate two part CO2. Hence, CO2 is a direct measurement of the alcohol production. The key issue is to measurement this gas accurate and precise. Hence, the need of sealed airtight tanks.
-
-               C6H12O6    ====>   2(CH3CH2OH) + 2(CO2) (+Energy)
-               
-                Sugar     ====>    Alcohol    +   Carbon dioxide gas (+Energy)
-
-Hence, by knowing the BPM and brew size (L) and other involving constants we can plot a curve of Sum BLOPS/L vs. the reduction in Gravity and generate a model or polynomial for the alcohol production based on our initial measurement of  Blops pr. Min (BPM), se more below.
-
-### Atmospheric pressure + Temperature and Blops pr. Minute – Indirectly impacting the bubbling rate
-The Atmospheric pressure do impact on the amount of bubbles in the sense more bubbles can be seen at very low pressure! The assumption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, and/or the density of gasses in each bubbles is less.
-The temperature also impacts on the activity of gasses, and hence at lower temperature the molecules is not moving as fast and therefore the bubbles rate is lower at lager temperature of 10`C vs. an ale of 20´C.
-The “Bubble Logger” software contains complex build in models to account for change of pressure and temperature and reports the “Sum BLOPS(pt)/L” adjusted for the pressure and temperature impact. 
-
-### Estimation of SG by polynomial approach
-If your are using an airtight tank and an S-shaped airlock with 4-4,5 ml water and a “hear and see” calibrated/aligned sensor you can to some degree predict the SG by the BPM (e.g. “Sum BLOPS(pt)/L”). It will only be an estimate and sometimes the SG will be way off.
-The SG is calculated by we measure the BPM over time and this is re-calculated in regards of “Sum BLOPS(pt)/L” by taken the current pressure, temperature and brew size into account (L), and hence this is used by the polynomial to calculate the rG though a first or second degree polynomial.
-
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_graph.png)
-
-Looking at below data of the 18 brews done and plotting the reported rG vs. Sum BPMpt/L at the time the brew reached FG, we can model a first or second degree polynomial to fits the data and these polynomials can be used to model the reduction in gravity, rG. Hence, if you repeatedly take notice of the Sum BPMpt/L when FG is reached over 3-5 brews, you should be able to develop a polynomial/decision tool to foreseen the rG by the Bubble-Logger for your equipment.
-
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_overviewDATA.png)
-
-  
-
-Hence, if making use of above data we can generate a indicative rG table for this equipment setup (e.g. sensor, airlock) based on the reported “Sum BPMpt/L” (based on “hear and see” calibrated sensor, 4,5 ml water in S-airlock and airtight fermenter):
-
-![alt text](https://github.com/kbaggen/Sound-Bubble-Logger-and-Temperature-controller-for-TILT/blob/master/pic/SBL4TILT_table.png)
- 
-Meaning the “Sum BPMpt/L” of 5000 should give and reduction in gravity, rG, around 38-39 and error of mean is around 3 SG units (see former table).
-This should in theory function for all airtight fermenters/setup if using a calibrated sensor to “hear and sound” and having a S-shaped airlock with 4-4.5ml water. Every user will need to make there own polynomial based on above process.
-
-Please notice the key or purpose of the Bubble-Logger here is not the rG nor gravity estimation, but when the BPM or Sum BLOPS(pt)/L starts to flatten, and hence, when we should start to consider make a hydrometer reading.  All users of both Tilt, Ispindel and PLAATO in the end have to make a hydrometer reading, hence, the game here is to give the user the data to decide when it is time to do so, besides, giving the user data on when yeast activity is falling in regards of decision for dry hopping, temperature changes, cool crash, etc.!   
-
-So the user calculated polynomial and hence rG can be close to real life if a keen eye on airtight tanks, calibration and precise amount of water in airlock, but it cannot stand alone and in this sense a TILT or Ispindel is considered more precise. We believe the activity measurement of the Bubble Logger joint together with TILT gravity data is the best approach the homebrewer can do. 
-
-### Airlocks is different - One sensor,  one Airlock, giving “Your” polynomial
-As there is difference between airlocks, difference in the molding, in the plastic and hence how the bubbles is formed then every user will need to stick to the rule of one sensor, one airlock and hence development of your own polyonimial. Secondly, if you let the sensor stay in the airlock though somekind of blowout system chances are high you can predict the rG or SG by the use of Sum BLOPS(pt)/L.
-
-!!! Please notice, the above data is for a former sensor now dead and an airlock I have put to the grave too. Hence, I am to develop a new set of data on new sensor and new airlock in a blow-out system, so time will tell if this second run will hold water over the next 4-6 brews !!! 
-
-### Important “take on messages” if you want to look into rG
-*	One calibrated Sensor = One Airlock === Your own polynomial!
-*	Sensor should be calibrated till “hear and see” matching count.
-*	4-4,5ml in S-Airlock.
-*	Alignment of sensor should be the same. Consider let the sensor stay in airlock, and clean by alkaline solution, acid and StarSan accordingly.
-*	Use a fermenter there is airtight. Be a “Leak Hunter”!
-*	Take notice of your amounts in Liters and set this in Bubble-Logger setup.
-*	Recalculate the polynomial to your equipment. 
-*	Make use of slow and controlled fermentation and/or good headspace.
-*	Or, use a blow-out system.
-*	Steady WiFi is needed for the logger to obtain data it needs for calculation (e.g. surrounding pressure). 
